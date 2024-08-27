@@ -4,12 +4,11 @@
   <title>Home</title>
 </head>
 <body>
-  <h1>Welcome <%= user ? user.email : 'Guest' %></h1>
+  <h1>Welcome <%= user ? user.name : 'Guest' %></h1>
   <% if (user) { %>
-    <a href="/logout">Logout</a>
+    <a href="auth/logout">Logout</a>
   <% } else { %>
-    <a href="/login">Login</a>
-    <a href="/signup">Sign Up</a>
+    <a href="/login">Goto login</a>
   <% } %>
 </body>
 </html>

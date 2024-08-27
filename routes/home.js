@@ -5,7 +5,7 @@ const router = express.Router();
 const authMiddleware = require('../middlewares/authMiddeware')
 
 router.get('/',authMiddleware, (req, res) => {
-  console.log(req.cookies);
+  console.log("Cookie:",req.cookies);
   res.render('home', { user: req.user });
 });
 

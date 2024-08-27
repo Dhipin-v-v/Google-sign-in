@@ -11,6 +11,6 @@ passport.use(new GoogleStrategy({
 },
 (accessToken, refreshToken, profile, done) => {
   // Create a JWT token and attach it to the user object
-  const token = jwt.sign({ id: profile.id, email: profile.emails[0].value }, process.env.JWT_SECRET, { expiresIn: '1h' });
+  const token = jwt.sign({ id: profile.id, email: profile.emails[0].value, name: profile.displayName }, process.env.JWT_SECRET, { expiresIn: '1h' });
   return done(null, { token }); // Pass the token in the user object
 }));
