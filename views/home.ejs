@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <h1>Welcome <%= user ? user.email : 'Guest' %></h1>
+  <% if (user) { %>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+  <% } %>
+</body>
+</html>
